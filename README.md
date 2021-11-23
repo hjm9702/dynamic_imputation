@@ -12,8 +12,10 @@ This repository provides dynamic imputation implementations using two UCI datase
 
 ## Dependencies
 - **Python**
-- **Tensorflow**
-- **Scikit-learn**
+- **TensorFlow**
+- **scikit-learn**
+- **NumPy**
+- **SciPy**
 
 ## Run Code Example
 ```shell
