@@ -14,3 +14,6 @@ This repository provides dynamic imputation implementations using two UCI datase
 - **Python**
 - **Tensorflow**
 - **Scikit-learn**
+
+## Citation
+TBU
