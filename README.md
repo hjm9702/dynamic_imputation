@@ -15,5 +15,10 @@ This repository provides dynamic imputation implementations using two UCI datase
 - **Tensorflow**
 - **Scikit-learn**
 
+## Run Code Example
+```shell
+$ python main.py --seed 0 --dataset avila --missing_rate 30 --num_mi 5 --m 10 --tau 0.05
+```
+
 ## Citation
 TBU
