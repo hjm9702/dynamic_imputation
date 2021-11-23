@@ -31,7 +31,7 @@ def main(args):
     y = data[:,-1]
     
     x_trnval_o, x_tst_o, y_trnval_o, y_tst_o = train_test_split(x, y, random_state = seed, stratify = y, test_size = 0.5)
-    x_trnval, x_tst, x_tst_missing, y_trnval, y_tst = preprocessing(x_trnval_o, x_tst_o, y_trnval_o, y_tst_o, missing_rate, seed)
+    x_trnval, x_tst, y_trnval, y_tst = preprocessing(x_trnval_o, x_tst_o, y_trnval_o, y_tst_o, missing_rate, seed)
     
     dim_x = x_trnval.shape[1]
     

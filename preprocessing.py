@@ -5,7 +5,6 @@ from sklearn.preprocessing import OneHotEncoder
 from scipy.stats import poisson
 
 
-
 def missing_value_generator(X, missing_rate, seed):
     row_num = X.shape[0]
     column_num = X.shape[1]
@@ -22,19 +21,17 @@ def missing_value_generator(X, missing_rate, seed):
         for j in missing_idx:
             X_missing[i,j] = np.nan
     
+    
     return X_missing
 
 
 def preprocessing(x_trnval, x_tst, y_trnval, y_tst, missing_rate, seed):
     
     x_trnval = missing_value_generator(x_trnval, missing_rate, seed)
-    x_tst_missing = missing_value_generator(x_tst, missing_rate, seed)
-    
+
     scaler_x = StandardScaler()
-    
     x_trnval = scaler_x.fit_transform(x_trnval)
     x_tst = scaler_x.transform(x_tst)
-    x_tst_missing = scaler_x.transform(x_tst_missing)
     
     if len(np.unique(y_trnval)) > 2:
         enc = OneHotEncoder(sparse=False)
@@ -44,5 +41,5 @@ def preprocessing(x_trnval, x_tst, y_trnval, y_tst, missing_rate, seed):
     else:
         y_trnval = y_trnval.reshape(-1,1)
         y_tst = y_tst.reshape(-1,1)
-        
-    return x_trnval, x_tst, x_tst_missing, y_trnval, y_tst
+    
+    return x_trnval, x_tst, y_trnval, y_tst
