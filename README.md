@@ -9,3 +9,8 @@ This repository provides dynamic imputation implementations using two UCI datase
 - **preprocessing.py** - data preprocessing functions
 - **model.py** - model architecture with dynamic imputation
 - **main.py** - script for model training & evaluation
+
+## Dependencies
+- **Python**
+- **Tensorflow**
+- **Scikit-learn**
