@@ -25,7 +25,7 @@ $ python main.py --seed 0 --dataset avila --missing_rate 30 --num_mi 5 --m 10 --
 ## Citation
 ```shell
 @Article{Dynamic_imp,
-  title={Dynamic imputation \textnormal{for} improved training of neural network with missing values},
+  title={Dynamic imputation for improved training of neural network with missing values},
   author={Han, Jongmin and Kang, Seokho},
   journal={Expert Systems with Applications},
   volume={194},
